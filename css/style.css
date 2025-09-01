@@ -1,0 +1,44 @@
+@import url("./reset.css");
+
+body {
+    color: white;
+    font-size: 2rem;
+    background-color: rgb(219, 204, 204);
+    text-align: center;
+}
+
+.grid-container {
+    padding: 2em;
+    display: grid;
+    gap: 1rem;
+}
+
+.grid-container > * {
+    border-radius: 8px;
+    padding: .75rem;
+}
+
+header {
+    background-color: rgb(146, 44, 97);
+}
+
+.article-container {
+    background-color: rgb(89, 180, 128);
+    display: grid;
+    row-gap: 1rem;
+}
+
+article {
+    background-color: rgb(209, 53, 97);
+    border-radius: 8px;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+aside {
+    background-color: rgb(46, 98, 145);
+}
+
+footer {
+    background-color: rgb(209, 114, 57);
+}
