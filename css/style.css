@@ -8,7 +8,7 @@ body {
 }
 
 .grid-container {
-    padding: 2em;
+    padding: 1.5em 1em;
     display: grid;
     gap: 1rem;
 }
@@ -41,4 +41,48 @@ aside {
 
 footer {
     background-color: rgb(209, 114, 57);
+}
+
+@media (min-width: 60em) {
+    .grid-container {
+        grid-template-areas:
+            'header header header header'
+            'before article article after'            
+            'footer footer footer footer';
+    }
+
+    header {
+        grid-area: header;
+        min-height: 100px;
+    }
+
+    .aside1 {
+        grid-area: before;
+    }
+
+    .article-container {
+        grid-area: article;
+        min-height: 500px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    article {
+        grid-row-start: 2;
+    }
+
+    .aside2 {
+        grid-area: after;
+    }
+    
+    footer {
+        grid-area: footer;
+        min-height: 100px;
+    }
+
+    .grid-container {
+        padding: 1em;
+    }
 }
